@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="0dp"
+    tools:context="com.example.dario.wikigame.Menu">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                app:srcCompat="@drawable/wikilogo"
+                android:id="@+id/imageView"
+                android:layout_height="130dp" />
+
+            <TextView
+                android:text="Select a Category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:fontFamily="sans-serif"
+                android:textSize="22sp"
+                android:textAlignment="center" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:elevation="6dp">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/fotimg"
+                    android:src="@drawable/foot"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="20dp"
+                    app:riv_border_width="1dp"
+                    app:riv_border_color="#333333"
+                    app:riv_mutate_background="true"
+                     />
+
+
+                <TextView
+                    android:text="Football"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/foottext"
+                    android:textColor="@android:color/background_light"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:text="PLAY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonFot"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:elevation="6dp">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/musimg"
+                    android:src="@drawable/mu"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="20dp"
+                    app:riv_border_width="1dp"
+                    app:riv_border_color="#333333"
+                    app:riv_mutate_background="true"
+                    />
+
+
+                <TextView
+                    android:text="Music"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mustext"
+                    android:textColor="@android:color/background_light"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textAllCaps="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <Button
+                    android:text="PLAY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonMus"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:elevation="6dp">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/gamimg"
+                    android:src="@drawable/arca"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="20dp"
+                    app:riv_border_width="1dp"
+                    app:riv_border_color="#333333"
+                    app:riv_mutate_background="true"
+                    />
+
+
+                <TextView
+                    android:text="Games"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gamtext"
+                    android:textColor="@android:color/background_light"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:text="PLAY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGam"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:elevation="6dp">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/celimg"
+                    android:src="@drawable/fam"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="20dp"
+                    app:riv_border_width="1dp"
+                    app:riv_border_color="#333333"
+                    app:riv_mutate_background="true"
+                    />
+
+
+                <TextView
+                    android:text="Celebrities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/celtext"
+                    android:textColor="@android:color/background_light"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textAllCaps="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <Button
+                    android:text="PLAY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonCel"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,386 @@
+[
+  {
+  "title" : "Marilyn Monroe",
+  "type":"Famous"
+  },
+  {
+  "title" : "Abraham Lincoln",
+  "type":"Famous"
+  },
+  {
+  "title" : "Mother Teresa",
+  "type":"Famous"
+  },
+  {
+  "title" : "John F. Kennedy",
+  "type":"Famous"
+  },
+  {
+  "title" : "Martin Luther King",
+  "type":"Famous"
+  },
+  {
+  "title" : "Nelson Mandela",
+  "type":"Famous"
+  },
+  {
+  "title" : "Winston Churchill",
+  "type":"Famous"
+  },
+  {
+  "title" : "Bill Gates",
+  "type":"Famous"
+  },
+  {
+  "title" : "Muhammad Ali",
+  "type":"Famous"
+  },
+  {
+  "title" : "Mahatma Gandhi",
+  "type":"Famous"
+  },
+  {
+  "title" : "Margaret Thatcher",
+  "type":"Famous"
+  },
+  {
+  "title" : "Charles de Gaulle",
+  "type":"Famous"
+  },
+  {
+  "title" : "Christopher Columbus",
+  "type":"Famous"
+  },
+  {
+  "title" : "George Orwell",
+  "type":"Famous"
+  },
+  {
+  "title" : "Charles Darwin",
+  "type":"Famous"
+  },
+  {
+  "title" : "Elvis Presley",
+  "type":"Famous"
+  },
+  {
+  "title" : "Albert Einstein",
+  "type":"Famous"
+  },
+  {
+  "title" : "Paul McCartney",
+  "type":"Famous"
+  },
+  {
+  "title" : "Plato",
+  "type":"Famous"
+  },
+  {
+  "title" : "Queen Elizabeth",
+  "type":"Famous"
+  },
+  {
+  "title" : "Queen Victoria",
+  "type":"Famous"
+  },
+  {
+  "title" : "John M Keynes",
+  "type":"Famous"
+  },
+  {
+  "title" : "Mikhail Gorbachev",
+  "type":"Famous"
+  },
+  {
+  "title" : "Jawaharlal Nehru",
+  "type":"Famous"
+  },
+  {
+  "title" : "Leonardo da Vinci",
+  "type":"Famous"
+  },
+  {
+  "title" : "Louis Pasteur",
+  "type":"Famous"
+  },
+  {
+  "title" : "Leo Tolstoy",
+  "type":"Famous"
+  },
+  {
+  "title" : "Pablo Picasso",
+  "type":"Famous"
+  },
+  {
+  "title" : "Vincent Van Gogh",
+  "type":"Famous"
+  },
+  {
+  "title" : "Franklin D. Roosevelt",
+  "type":"Famous"
+  },
+  {
+  "title" : "Pope John Paul II",
+  "type":"Famous"
+  },
+  {
+  "title" : "Thomas Edison",
+  "type":"Famous"
+  },
+  {
+  "title" : "Rosa Parks",
+  "type":"Famous"
+  },
+  {
+  "title" : "Aung San Suu Kyi",
+  "type":"Famous"
+  },
+  {
+  "title" : "Lyndon Johnson",
+  "type":"Famous"
+  },
+  {
+  "title" : "Ludwig Beethoven",
+  "type":"Famous"
+  },
+  {
+  "title" : "Oprah Winfrey",
+  "type":"Famous"
+  },
+  {
+  "title" : "Indira Gandhi",
+  "type":"Famous"
+  },
+  {
+  "title" : "Eva Peron",
+  "type":"Famous"
+  },
+  {
+  "title" : "Benazir Bhutto",
+  "type":"Famous"
+  },
+  {
+  "title" : "Desmond Tutu",
+  "type":"Famous"
+  },
+  {
+  "title" : "Dalai Lama",
+  "type":"Famous"
+  },
+  {
+  "title" : "Walt Disney",
+  "type":"Famous"
+  },
+  {
+  "title" : "Donald Trump",
+  "type":"Famous"
+  },
+  {
+  "title" : "Peter Sellers",
+  "type":"Famous"
+  },
+  {
+  "title" : "Barack Obama",
+  "type":"Famous"
+  },
+  {
+  "title" : "Malcolm X",
+  "type":"Famous"
+  },
+  {
+  "title" : "J.K.Rowling",
+  "type":"Famous"
+  },
+  {
+  "title" : "Richard Branson",
+  "type":"Famous"
+  },
+  {
+  "title" : "Pele",
+  "type":"Famous"
+  },
+  {
+  "title" : "Angelina Jolie",
+  "type":"Famous"
+  },
+  {
+  "title" : "Jesse Owens",
+  "type":"Famous"
+  },
+  {
+  "title" : "Ernest Hemingway",
+  "type":"Famous"
+  },
+  {
+  "title" : "John Lennon",
+  "type":"Famous"
+  },
+  {
+  "title" : "Henry Ford",
+  "type":"Famous"
+  },
+  {
+  "title" : "Haile Selassie",
+  "type":"Famous"
+  },
+  {
+  "title" : "Joseph Stalin",
+  "type":"Famous"
+  },
+  {
+  "title" : "Lord Baden Powell",
+  "type":"Famous"
+  },
+  {
+  "title" : "Michael Jordon",
+  "type":"Famous"
+  },
+  {
+  "title" : "Vladimir Lenin",
+  "type":"Famous"
+  },
+  {
+  "title" : "Ingrid Bergman",
+  "type":"Famous"
+  },
+  {
+  "title" : "Fidel Castro",
+  "type":"Famous"
+  },
+  {
+  "title" : "Oscar Wilde",
+  "type":"Famous"
+  },
+  {
+  "title" : "Coco Chanel",
+  "type":"Famous"
+  },
+  {
+  "title" : "Pope Francis",
+  "type":"Famous"
+  },
+  {
+  "title" : "Amelia Earhart",
+  "type":"Famous"
+  },
+  {
+  "title" : "Adolf Hitler",
+  "type":"Famous"
+  },
+  {
+  "title" : "Sting",
+  "type":"Famous"
+  },
+  {
+  "title" : "Mary Magdalene",
+  "type":"Famous"
+  },
+  {
+  "title" : "Alfred Hitchcock",
+  "type":"Famous"
+  },
+  {
+  "title" : "Michael Jackson",
+  "type":"Famous"
+  },
+  {
+  "title" : "Madonna",
+  "type":"Famous"
+  },
+  {
+  "title" : "Mata Hari",
+  "type":"Famous"
+  },
+  {
+  "title" : "Cleopatra",
+  "type":"Famous"
+  },
+  {
+  "title" : "Grace Kelly",
+  "type":"Famous"
+  },
+  {
+  "title" : "Steve Jobs",
+  "type":"Famous"
+  },
+  {
+  "title" : "Ronald Reagan",
+  "type":"Famous"
+  },
+  {
+  "title" : "Lionel Messi",
+  "type":"Famous"
+  },
+  {
+  "title" : "Babe Ruth",
+  "type":"Famous"
+  },
+  {
+  "title" : "Bob Geldof",
+  "type":"Famous"
+  },
+  {
+  "title" : "Roger Federer",
+  "type":"Famous"
+  },
+  {
+  "title" : "Sigmund Freud",
+  "type":"Famous"
+  },
+  {
+  "title" : "Woodrow Wilson",
+  "type":"Famous"
+  },
+  {
+  "title" : "Mao Zedong",
+  "type":"Famous"
+  },
+  {
+  "title" : "Katherine Hepburn",
+  "type":"Famous"
+  },
+  {
+  "title" : "Audrey Hepburn",
+  "type":"Famous"
+  },
+  {
+  "title" : "David Beckham",
+  "type":"Famous"
+  },
+  {
+  "title" : "Usain Bolt",
+  "type":"Famous"
+  },
+  {
+  "title" : "Carl Lewis",
+  "type":"Famous"
+  },
+  {
+  "title" : "Prince Charles",
+  "type":"Famous"
+  },
+  {
+  "title" : "Jacqueline Kennedy Onassis",
+  "type":"Famous"
+  },
+  {
+  "title" : "C.S. Lewis",
+  "type":"Famous"
+  },
+  {
+  "title" : "Billie Holiday",
+  "type":"Famous"
+  },
+  {
+  "title" : "J.R.R. Tolkien",
+  "type":"Famous"
+  },
+  {
+  "title" : "Billie Jean King",
+  "type":"Famous"
+  },
+  {
+  "title" : "Anne Frank",
+  "type":"Famous"
+  }
+]

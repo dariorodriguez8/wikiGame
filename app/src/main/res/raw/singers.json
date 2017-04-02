@@ -1,0 +1,395 @@
+[
+
+{
+  "title" : "BEATLES",
+  "type":"Artists"
+},
+{
+"title" : "MADONNA",
+"type":"Artists"
+},
+{
+"title" : "ELTON JOHN",
+"type":"Artists"
+},
+{
+"title" : "ELVIS PRESLEY",
+"type":"Artists"
+},
+{
+"title" : "MARIAH CAREY",
+"type":"Artists"
+},
+{
+"title" : "STEVIE WONDER",
+"type":"Artists"
+},
+{
+"title" : "JANET JACKSON",
+"type":"Artists"
+},
+{
+"title" : "MICHAEL JACKSON",
+"type":"Artists"
+},
+{
+"title" : "WHITNEY HOUSTON",
+"type":"Artists"
+},
+{
+"title" : "ROLLING STONES",
+"type":"Artists"
+},
+{
+"title" : "PAUL MCCARTNEY",
+"type":"Artists"
+},
+{
+"title" : "BEE GEES",
+"type":"Artists"
+},
+{
+"title" : "RIHANNA",
+"type":"Artists"
+},
+{
+"title" : "USHER",
+"type":"Artists"
+},
+{
+"title" : "CHICAGO",
+"type":"Artists"
+},
+{
+"title" : "SUPREMES",
+"type":"Artists"
+},
+{
+"title" : "DARYL HALL JOHN OATES",
+"type":"Artists"
+},
+{
+"title" : "PRINCE",
+"type":"Artists"
+},
+{
+"title" : "ROD STEWART",
+"type":"Artists"
+},
+{
+"title" : "OLIVIA NEWTON-JOHN",
+"type":"Artists"
+},
+{
+"title" : "ARETHA FRANKLIN",
+"type":"Artists"
+},
+{
+"title" : "MARVIN GAYE",
+"type":"Artists"
+},
+{
+"title" : "PHIL COLLINS",
+"type":"Artists"
+},
+{
+"title" : "KATY PERRY",
+"type":"Artists"
+},
+{
+"title" : "BILLY JOEL",
+"type":"Artists"
+},
+{
+"title" : "DIANA ROSS",
+"type":"Artists"
+},
+{
+"title" : "FOUR SEASONS",
+"type":"Artists"
+},
+{
+"title" : "TEMPTATIONS",
+"type":"Artists"
+},
+{
+"title" : "DONNA SUMMER",
+"type":"Artists"
+},
+{
+"title" : "BEACH BOYS",
+"type":"Artists"
+},
+{
+"title" : "LIONEL RICHIE",
+"type":"Artists"
+},
+{
+"title" : "NEIL DIAMOND",
+"type":"Artists"
+},
+{
+"title" : "CARPENTERS",
+"type":"Artists"
+},
+{
+"title" : "TAYLOR SWIFT",
+"type":"Artists"
+},
+{
+"title" : "BOYZ II MEN",
+"type":"Artists"
+},
+{
+"title" : "JACKSONS",
+"type":"Artists"
+},
+{
+"title" : "CONNIE FRANCIS",
+"type":"Artists"
+},
+{
+"title" : "KENNY ROGERS",
+"type":"Artists"
+},
+{
+"title" : "BEYONCE",
+"type":"Artists"
+},
+{
+"title" : "BRENDA LEE",
+"type":"Artists"
+},
+{
+"title" : "BARBRA STREISAND",
+"type":"Artists"
+},
+{
+"title" : "BRYAN ADAMS",
+"type":"Artists"
+},
+{
+"title" : "CHER",
+"type":"Artists"
+},
+{
+"title" : "MAROON 5",
+"type":"Artists"
+},
+{
+"title" : "GEORGE MICHAEL",
+"type":"Artists"
+},
+{
+"title" : "BLACK EYED PEAS",
+"type":"Artists"
+},
+{
+"title" : "BOBBY VINTON",
+"type":"Artists"
+},
+{
+"title" : "JOHN MELLENCAMP",
+"type":"Artists"
+},
+{
+"title" : "THREE DOG NIGHT",
+"type":"Artists"
+},
+{
+"title" : "HUEY LEWIS & THE NEWS",
+"type":"Artists"
+},
+{
+"title" : "GLORIA ESTEFAN",
+"type":"Artists"
+},
+{
+"title" : "BON JOVI",
+"type":"Artists"
+},
+{
+"title" : "P!NK",
+"type":"Artists"
+},
+{
+"title" : "CHUBBY CHECKER",
+"type":"Artists"
+},
+{
+"title" : "RAY CHARLES",
+"type":"Artists"
+},
+{
+"title" : "FOREIGNER",
+"type":"Artists"
+},
+{
+"title" : "KOOL & THE GANG",
+"type":"Artists"
+},
+{
+"title" : "RICKY NELSON",
+"type":"Artists"
+},
+{
+"title" : "DURAN DURAN",
+"type":"Artists"
+},
+{
+"title" : "COMMODORES",
+"type":"Artists"
+},
+{
+"title" : "BRUNO MARS",
+"type":"Artists"
+},
+{
+"title" : "EAGLES",
+"type":"Artists"
+},
+{
+"title" : "TLC",
+"type":"Artists"
+},
+{
+"title" : "PAUL ANKA",
+"type":"Artists"
+},
+{
+"title" : "BARRY MANILOW",
+"type":"Artists"
+},
+{
+"title" : "DIONNE WARWICK",
+"type":"Artists"
+},
+{
+"title" : "CHRIS BROWN",
+"type":"Artists"
+},
+{
+"title" : "LADY GAGA",
+"type":"Artists"
+},
+{
+"title" : "GLADYS KNIGHT AND THE PIPS",
+"type":"Artists"
+},
+{
+"title" : "HEART",
+"type":"Artists"
+},
+{
+"title" : "NELLY",
+"type":"Artists"
+},
+{
+"title" : "BOBBY DARIN",
+"type":"Artists"
+},
+{
+"title" : "R. KELLY",
+"type":"Artists"
+},
+{
+"title" : "JAMES BROWN",
+"type":"Artists"
+},
+{
+"title" : "PAULA ABDUL",
+"type":"Artists"
+},
+{
+"title" : "ALICIA KEYS",
+"type":"Artists"
+},
+{
+"title" : "LINDA RONSTADT",
+"type":"Artists"
+},
+{
+"title" : "KELLY CLARKSON",
+"type":"Artists"
+},
+{
+"title" : "RICHARD MARX",
+"type":"Artists"
+},
+{
+"title" : "STARSHIP",
+"type":"Artists"
+},
+{
+"title" : "DESTINY'S CHILD",
+"type":"Artists"
+},
+{
+"title" : "CELINE DION",
+"type":"Artists"
+},
+{
+"title" : "EMINEM",
+"type":"Artists"
+},
+{
+"title" : "JAY Z",
+"type":"Artists"
+},
+{
+"title" : "BOB SEGER",
+"type":"Artists"
+},
+{
+"title" : "FLEETWOOD MAC",
+"type":"Artists"
+},
+{
+"title" : "KANYE WEST",
+"type":"Artists"
+},
+{
+"title" : "JUSTIN TIMBERLAKE",
+"type":"Artists"
+},
+{
+"title" : "NEIL SEDAKA",
+"type":"Artists"
+},
+{
+"title" : "BRUCE SPRINGSTEEN",
+"type":"Artists"
+},
+{
+"title" : "THE POINTER SISTERS",
+"type":"Artists"
+},
+{
+"title" : "JOHN DENVER",
+"type":"Artists"
+},
+{
+"title" : "FOUR TOPS",
+"type":"Artists"
+},
+{
+"title" : "TONY ORLANDO & DAWN",
+"type":"Artists"
+},
+{
+"title" : "50 CENT",
+"type":"Artists"
+},
+{
+"title" : "THE 5TH DIMENSION",
+"type":"Artists"
+},
+{
+"title" : "CAPTAIN & TENNILLE",
+"type":"Artists"
+},
+{
+"title" : "ANDY GIBB",
+"type":"Artists"
+}
+]
