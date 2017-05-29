@@ -1,4 +1,4 @@
-package com.example.dario.wikigame;
+package com.example.project.wikigame;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -20,9 +20,15 @@ public class Menu extends AppCompatActivity {
     Button btnFut, btnCel, btnMus, btnGam;
 
     @Override
+    public void onBackPressed() {
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
 
         fut = (TextView) findViewById(R.id.buttonFot);
         mus = (TextView) findViewById(R.id.buttonMus);

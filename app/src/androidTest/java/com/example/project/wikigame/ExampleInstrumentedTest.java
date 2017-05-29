@@ -1,4 +1,4 @@
-package com.example.dario.wikigame;
+package com.example.project.wikigame;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

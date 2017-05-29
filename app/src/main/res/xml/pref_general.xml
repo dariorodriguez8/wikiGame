@@ -1,0 +1,54 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="PERFIL">
+        <EditTextPreference
+            android:key="nombre_pref"
+            android:title="Nombre"
+            android:summary="nombre"
+            android:dialogTitle="nombre" />
+        <EditTextPreference
+            android:key="radio_pref"
+            android:title="Radio"
+            android:inputType="number"
+            android:summary="0m"
+            android:dialogTitle="" />
+        <EditTextPreference
+            android:key="apellidos_pref"
+            android:title="Apellidos"
+            android:summary="Apellidos"
+            android:dialogTitle="Apellidos" />
+        <SwitchPreference
+            android:key="coche_pref"
+            android:title="Coche disponible" />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="Preferencias">
+        <ListPreference
+            android:key="conductor_pref"
+            android:title="Preferencias de Conductor"
+            android:summary=""
+            android:entries="@array/entries_list_preference"
+            android:entryValues="@array/entryvalues_list_preference"
+            android:dialogTitle="" />
+        <ListPreference
+            android:key="conductor_pref"
+            android:title="Preferencias de Conductor"
+            android:summary=""
+            android:entries="@array/entries_list_preference"
+            android:entryValues="@array/entryvalues_list_preference"
+            android:dialogTitle="" />
+        <EditTextPreference
+            android:key="actualizar_pref"
+            android:title="Actualizar"
+            android:summary="Tiempo de espera entre cargas de GPS"
+            android:dialogTitle="Actualizar"/>
+        <SwitchPreference
+            android:key="Logueado_pref"
+            android:title="Recordar al entrar" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
