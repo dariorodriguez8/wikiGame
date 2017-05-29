@@ -1,5 +1,6 @@
 package com.example.project.wikigame;
 
+// LIBRERIAS
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -7,13 +8,19 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+
+import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Vibrator;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,8 +64,6 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
 
-
-
 public class MainActivity extends AppCompatActivity {
     String word;
     TextView texto;
@@ -85,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
     String lang;
 
     LottieAnimationView animationView;
+    MediaPlayer mp;
 
     int contador = 0;
 
@@ -92,7 +98,9 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences.Editor mEditor;
     private SharedPreferences mSharedPreferences;
     private GoogleApiClient client2;
+    SharedPreferences pref;
 
+    // Si le das al botón de volver atrás genera un cuadro para confirmar
     @Override
     public void onBackPressed() {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
@@ -119,8 +127,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        boolean full = pref.getBoolean("full_pref",false);
+        if(full) {
+            requestWindowFeature(Window.FEATURE_NO_TITLE);
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
         setContentView(R.layout.activity_main);
-
+        mp= MediaPlayer.create(this, R.raw.bing);
         lang = Locale.getDefault().getLanguage();
         oldOne = new ArrayList<String>();
         oldOne.add("prueba");
@@ -153,6 +167,8 @@ public class MainActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.editText);
         Typeface fuente = Typeface.createFromAsset(getAssets(), carpetaFuente);
         texto.setTypeface(fuente);
+
+        // Botón generar
         btnGenerate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -160,7 +176,6 @@ public class MainActivity extends AppCompatActivity {
                 contador++;
                 Log.v("eee",contador+"");
                 contadorReload--;
-
 
                 if (contadorReload >= 0) {
                     generate.setText(contadorReload + "");
@@ -170,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 } else {
 
-                    //vidas--;
+                    vidas--;
                     comprobarVidas();
                 }
 
@@ -180,12 +195,15 @@ public class MainActivity extends AppCompatActivity {
 
         tipoDeJuego = getIntent().getStringExtra(TYPE_GAME);
 
+        // Botón comprobar
         btnCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 validate();
             }
         });
+
+        // Botón pista
         btnClue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -200,16 +218,14 @@ public class MainActivity extends AppCompatActivity {
         generaPalabra();
         client2 = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
-
     }
 
-
+    // Comrpueba si está bien puesta la palabra
     public void validate() {
 
         String e = stripAccents(editText.getText().toString());
 
         if (e.toLowerCase().equals(stripAccents(word.toLowerCase()))) {
-
 
             animationView.setVisibility(View.VISIBLE);
             animationView.setAnimation("check_pop.json");
@@ -241,7 +257,6 @@ public class MainActivity extends AppCompatActivity {
             });
             animator.start();
             animationView.playAnimation();
-            //animationView.setVisibility(View.INVISIBLE);
             pantalla.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_out));
             pantalla.setVisibility(View.INVISIBLE);
 
@@ -252,12 +267,13 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 puntuacion = puntuacion + 10;
             }
-         
-
-            //puntos.setText("" + puntuacion);
-
 
             animateTextView(OLD_puntuacion,puntuacion,puntos);
+
+            boolean sou = pref.getBoolean("sound_pref",false);
+            if(sou) {
+                mp.start();
+            }
 
             editText.setText("");
             generaPalabra();
@@ -301,9 +317,13 @@ public class MainActivity extends AppCompatActivity {
             pantalla.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_out));
             pantalla.setVisibility(View.INVISIBLE);
 
-           /* Vibrator v = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
-            // Vibrate for 500 milliseconds
-            v.vibrate(200);*/
+
+            boolean vib = pref.getBoolean("vib_pref",false);
+            if(vib) {
+                Vibrator v = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+                v.vibrate(200);
+            }
+
             if (vidas >= 0 && vidas <= 6) {
                 vidas--;
             }
@@ -314,6 +334,8 @@ public class MainActivity extends AppCompatActivity {
         comprobarVidas();
 
     }
+
+    // Quita los acentos
     public static String stripAccents(String s)
     {
         s = Normalizer.normalize(s, Normalizer.Form.NFD);
@@ -321,6 +343,7 @@ public class MainActivity extends AppCompatActivity {
         return s;
     }
 
+    // Animaciones
     public void animateTextView(int initialValue, int finalValue, final TextView  textview) {
 
         ValueAnimator valueAnimator = ValueAnimator.ofInt(initialValue, finalValue);
@@ -338,6 +361,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Comprueba las vidas restantes
     public void comprobarVidas() {
         switch (vidas) {
             case 0:
@@ -502,6 +526,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Genera la palabra aleatoria y la pone a minusculas y sin acentos
     public void generaPalabra() {
         trig = false;
         InputStream inputStream = new InputStream() {
@@ -548,13 +573,13 @@ public class MainActivity extends AppCompatActivity {
             while(b) {
                 randomnumber = Math.round((float) (Math.random() * array.length()) - 1);
                 List<String> l = oldOne;
-                for (String s:
-                     l) {
+                for (String s:l) {
+                    Log.v("hulk", array.getJSONObject(randomnumber).getString("title") +"||"+s);
                     if(array.getJSONObject(randomnumber).getString("title").equals(s)){
-                    x=false;
-                }else{
-                    x=true;
-                }
+                        x=false;
+                    }else{
+                        x=true;
+                    }
                 }
                 if(x){
                     b=false;
@@ -564,7 +589,13 @@ public class MainActivity extends AppCompatActivity {
 
             nombre = array.getJSONObject(randomnumber).getString("title");
             oldOne.add(nombre);
-            Log.v("eee", nombre);
+            String n = "";
+            for (int i = 0; i < oldOne.size(); i++) {
+                 n = n + " "+oldOne.get(i).toString() + "|| ("+i+")" ;
+
+            }
+
+            Log.v("array",n);
             buscaWiki(nombre);
 
 
@@ -575,6 +606,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Busca en la API de Wikipedia la palabra
     public void buscaWiki(String w) {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
@@ -621,11 +653,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    // Guarda la imagen y el primer parrafo de la wikipedia de cada palabra
     public void generaWiki(String w) {
         imag.setVisibility(View.INVISIBLE);
 
-        Log.v("aaa", "el resultado es ------>" + w);
+        //Log.v("aaa", "el resultado es ------>" + w);
         word = w;
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
@@ -634,7 +666,6 @@ public class MainActivity extends AppCompatActivity {
 
         Call call = client.newCall(request);
         call.enqueue(new Callback() {
-
 
             @Override
             public void onFailure(Request request, IOException e) {
@@ -686,13 +717,11 @@ public class MainActivity extends AppCompatActivity {
                                     fin = palabrasSeparadas[palabrasSeparadas.length - 1];
 
 
-                                    String vac = "_";
-
                                /* for(int i=0;i<word.length();i++){
                                     vac= vac+vac;
                                 }*/
                                     int a = word.length();
-                                    String repeated = new String(new char[a]).replace("\0", "_ ");
+                                    String repeated = new String(new char[a]).replace("\0", "█ ");
                                     String n = "";
 
                                     for (int i = 0; i < word.length(); i++) {
@@ -700,16 +729,16 @@ public class MainActivity extends AppCompatActivity {
                                         if (b == ' ') {
                                             n += "  ";
                                         } else {
-                                            n += "_ ";
+                                            n += "█ ";
                                         }
 
                                     }
                                     textoNuevo = textoNuevo.replaceAll("(" + inicio + " .*?" + fin + ")", n);
                                     if (inicio.length() > 2) {
-                                        textoNuevo = textoNuevo.replaceAll("(?i)" + inicio, new String(new char[inicio.length()]).replace("\0", "_ "));
+                                        textoNuevo = textoNuevo.replaceAll("(?i)" + inicio, new String(new char[inicio.length()]).replace("\0", "█ "));
                                     }
                                     if (fin.length() > 2) {
-                                        textoNuevo = textoNuevo.replaceAll("(?i)" + fin, new String(new char[fin.length()]).replace("\0", "_ "));
+                                        textoNuevo = textoNuevo.replaceAll("(?i)" + fin, new String(new char[fin.length()]).replace("\0", "█ "));
                                     }
                                     textoNuevo = textoNuevo.replaceAll("(?i)" + word, n);
                                     texto.setText(textoNuevo);
@@ -757,9 +786,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client2, getIndexApiAction());
         client2.disconnect();
     }

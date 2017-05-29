@@ -1,2 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">wikiGame</string>
+    <string name="youLost">HAS PERDIDO</string>
+    <string name="tryAgain">VOLVER A INTENTAR</string>
+    <string name="mainMenu">MENÚ PRINCIPAL</string>
+    <string name="answer">Respuesta...</string>
+    <string name="generate">GENERAR</string>
+    <string name="check">COMPROBAR</string>
+    <string name="clue">PISTA</string>
+    <string name="selectCategory">Selecciona una categoría</string>
+    <string name="play">JUGAR</string>
+    <string name="football">FÚTBOL</string>
+    <string name="celebrities">FAMOSOS</string>
+    <string name="games">JUEGOS</string>
+    <string name="music">MÚSICA</string>
+    <string name="new_record">NUEVO RECORD</string>
+    <string name="r_u_sure">¿Estás seguro?</string>
+    <string name="leave">Si abandonas el juego la puntucaión se perderá</string>
+    <string name="yes">SI</string>
+    <string name="resume">CONTINUAR</string>
+    <string name="pref">PREFERENCIAS</string>
+    <string name="vibracion">Vibración</string>
+    <string name="sound">Sonido</string>
+    <string name="full">Pantalla Completa</string>
+</resources>

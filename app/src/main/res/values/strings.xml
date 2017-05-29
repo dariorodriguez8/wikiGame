@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">wikiGame</string>
+    <string name="youLost">YOU LOST</string>
+    <string name="tryAgain">TRY AGAIN</string>
+    <string name="mainMenu">MAIN MENU</string>
+    <string name="answer">Answer...</string>
+    <string name="generate">GENERATE</string>
+    <string name="check">CHECK</string>
+    <string name="clue">CLUE</string>
+    <string name="selectCategory">Select a category</string>
+    <string name="play">PLAY</string>
+    <string name="football">FOOTBALL</string>
+    <string name="celebrities">CELEBRITIES</string>
+    <string name="games">GAMES</string>
+    <string name="music">MUSIC</string>
+    <string name="new_record">NEW RECORD</string>
+    <string name="r_u_sure">Are you sure?</string>
+    <string name="leave">If you leave the game the score will be lost</string>
+    <string name="yes">YES</string>
+    <string name="resume">RESUME</string>
+    <string name="pref">PREFERENCES</string>
+    <string name="vibracion">Vibration</string>
+    <string name="sound">Sound</string>
+    <string name="full">Fullscreen</string>
 </resources>

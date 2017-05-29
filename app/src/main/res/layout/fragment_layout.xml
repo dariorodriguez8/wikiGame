@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray">
 
+    <TextView
+        android:text="@string/youLost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:text="1000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:text="@string/new_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewRecord"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:textColor="#80cc0000"
+        android:typeface="monospace"
+        android:textAllCaps="false"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:text="@string/tryAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+        <Button
+            android:text="@string/mainMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+    </LinearLayout>
 </LinearLayout>

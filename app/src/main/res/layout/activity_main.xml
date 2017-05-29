@@ -6,96 +6,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.example.dario.wikigame.MainActivity">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/editText"
-        android:paddingRight="12dp"
-        android:paddingLeft="12dp"
-        android:layout_below="@+id/textView4">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <TextView
-                android:paddingRight="12dp"
-                android:paddingLeft="12dp"
-                android:textSize="18dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView2"
-                android:layout_below="@+id/my_toolbar"
-                android:layout_alignParentStart="true" />
-
-            <ImageView
-
-                android:layout_centerHorizontal="true"
-                app:srcCompat="@mipmap/ic_launcher"
-                android:id="@+id/imageView2"
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center_horizontal"
-                android:visibility="invisible"
-                />
-        </LinearLayout>
-    </ScrollView>
+    tools:context="com.example.project.wikigame.MainActivity">
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lin"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp">
+        android:background="@color/colorPrimaryDark"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:elevation="0dp"
+        android:id="@+id/linear"
+        android:weightSum="1">
 
-        <Button
-            android:text="GENERATE"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/button"
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText"
+            style="@android:style/Widget.Material.Light.EditText"
+            android:paddingLeft="16dp"
+            android:layout_above="@+id/lin"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/answer"
+            android:layout_weight="0.94"
+            android:background="@color/colorPrimary" />
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lin"
             android:layout_alignParentBottom="true"
-            android:layout_weight="1" />
-        <Button
-            android:text="CHECK"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/button2"
+            android:layout_alignParentStart="true"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp">
 
-            android:layout_alignParentBottom="true"
+            <ImageButton
 
-            android:layout_weight="1" />
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/reload"
+                style="@style/Widget.AppCompat.Button"
+                android:background="@android:color/holo_blue_dark"
+                android:textColor="@android:color/background_light" />
 
-        <Button
-            android:text="CLUE"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/button3"
 
-            android:layout_alignParentBottom="true"
+            <ImageButton
 
-            android:layout_weight="1" />
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ok"
+                android:layout_weight="1"
+                style="@style/Widget.AppCompat.Button"
+                android:background="@android:color/holo_green_light" />
+
+            <ImageButton
+
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"
+                android:src="@drawable/clue"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                style="@style/Widget.AppCompat.Button"
+                android:background="@android:color/holo_orange_light" />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-
-        android:id="@+id/editText"
-        style="@style/Widget.AppCompat.AutoCompleteTextView"
-        android:paddingLeft="16dp"
-        android:layout_above="@+id/lin"
-        android:layout_centerHorizontal="true"
-        android:hint="Answer" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -135,6 +120,83 @@
 
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/badge_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+
+        android:text="3"
+        android:textColor="#FFF"
+        android:textSize="9sp"
+        android:background="@drawable/badge_circle"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginLeft="62dp" />
+
+    <ImageView
+        android:layout_height="20dp"
+        android:layout_width="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="62dp"
+        app:srcCompat="@drawable/half"
+        android:id="@+id/imageViewHh"
+        android:visibility="invisible"
+        android:layout_marginBottom="3dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/linear">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:id="@+id/pantalla">
+
+            <TextView
+                android:paddingRight="12dp"
+                android:paddingLeft="12dp"
+                android:textSize="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/my_toolbar"
+                android:layout_alignParentStart="true"
+                android:paddingTop="12dp" />
+
+            <ImageView
+
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@mipmap/ic_launcher"
+                android:id="@+id/imageView2"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="invisible"
+                android:layout_marginTop="12dp"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:elevation="9dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
 
 
 </RelativeLayout>

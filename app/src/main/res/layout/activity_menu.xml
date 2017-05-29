@@ -9,14 +9,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="0dp"
-    tools:context="com.example.dario.wikigame.Menu">
+    tools:context="com.example.project.wikigame.Menu">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/myFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_name"
+        app:elevation="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:backgroundTint="#2a99d6"
+        android:layout_marginBottom="12dp" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scrollbars="none"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:scrollbars="none">
+        android:layout_marginStart="7dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,12 +38,12 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                app:srcCompat="@drawable/wikilogo"
+                app:srcCompat="@drawable/wikilogofinal"
                 android:id="@+id/imageView"
-                android:layout_height="130dp" />
+                android:layout_height="100dp" />
 
             <TextView
-                android:text="Select a Category"
+                android:text="@string/selectCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView3"
@@ -44,6 +56,7 @@
                 android:layout_height="150dp"
                 android:layout_marginTop="20dp"
                 android:elevation="6dp">
+
                 <com.makeramen.roundedimageview.RoundedImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
@@ -59,7 +72,7 @@
 
 
                 <TextView
-                    android:text="Football"
+                    android:text="@string/football"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/foottext"
@@ -69,18 +82,30 @@
                     android:paddingTop="20dp"
                     android:paddingLeft="12dp"
                     android:paddingRight="12dp"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:layout_marginTop="12dp" />
 
                 <Button
-                    android:text="PLAY"
+                    android:text="@string/play"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/button_play"
                     android:id="@+id/buttonFot"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/foottext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp" />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/buttonf"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:src="@drawable/lead"
+                    android:onClick="muestraRecord"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true" />
+                    android:layout_alignParentStart="true" />
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -103,7 +128,7 @@
 
 
                 <TextView
-                    android:text="Music"
+                    android:text="@string/music"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/mustext"
@@ -115,18 +140,28 @@
                     android:paddingRight="12dp"
                     android:textAllCaps="false"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="12dp" />
 
                 <Button
-                    android:text="PLAY"
+                    android:text="@string/play"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/buttonMus"
+                    android:background="@drawable/button_play"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_below="@+id/mustext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp" />
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/buttonm"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true" />
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/lead"
+                    android:onClick="muestraRecord" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -149,7 +184,7 @@
 
 
                 <TextView
-                    android:text="Games"
+                    android:text="@string/games"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/gamtext"
@@ -159,18 +194,29 @@
                     android:paddingTop="20dp"
                     android:paddingLeft="12dp"
                     android:paddingRight="12dp"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:layout_marginTop="12dp" />
 
                 <Button
-                    android:text="PLAY"
+                    android:text="@string/play"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/buttonGam"
+                    android:background="@drawable/button_play"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_below="@+id/gamtext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp" />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/buttong"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:src="@drawable/lead"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true" />
+                    android:layout_alignParentStart="true"
+                    android:onClick="muestraRecord" />
             </RelativeLayout>
 
 
@@ -194,7 +240,7 @@
 
 
                 <TextView
-                    android:text="Celebrities"
+                    android:text="@string/celebrities"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/celtext"
@@ -206,18 +252,28 @@
                     android:paddingRight="12dp"
                     android:textAllCaps="false"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="12dp" />
 
                 <Button
-                    android:text="PLAY"
+                    android:text="@string/play"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/buttonCel"
+                    android:background="@drawable/button_play"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/celtext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp" />
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/buttonc"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true" />
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/lead"
+                    android:onClick="muestraRecord" />
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
